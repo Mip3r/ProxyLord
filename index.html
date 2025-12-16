@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Proxy Lord</title>
+
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+  <style>
+    /* GLOBAL BODY + BACKGROUND */
+    body {
+      margin: 0;
+      font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: linear-gradient(45deg, yellow, orange, cyan, red);
+      color: #ffffff;
+    }
+
+    /* Animated text color */
+    h1 {
+      animation: textColorShift 16s linear infinite;
+    }
+
+    @keyframes textColorShift {
+      0%   { color: #ff0000; }
+      25%  { color: #ff00ff; }
+      50%  { color: #0000ff; }
+      75%  { color: #00008b; }
+      100% { color: #9d00ff; }
+    }
+
+    /* SIDEBAR */
+    .sidebar {
+      position: fixed;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 60px;
+      background: #151728;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 0;
+    }
+
+    .sidebar-top,
+    .sidebar-middle,
+    .sidebar-bottom {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .icon-btn {
+      width: 36px;
+      height: 36px;
+      border-radius: 999px;
+      border: none;
+      background: transparent;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      padding: 0;
+    }
+
+    .icon-btn:hover {
+      background: #23263a;
+    }
+
+    .icon-btn img {
+      width: 24px;
+      height: 24px;
+      object-fit: contain;
+      pointer-events: none;
+    }
+
+    /* MAIN CONTENT (HOME) */
+    .main-content {
+      margin-left: 60px;   /* same as sidebar width */
+      padding: 20px;
+      min-height: 100vh;
+      box-sizing: border-box;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .title {
+      font-size: 64px;
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- SIDEBAR -->
+  <div class="sidebar">
+    <div class="sidebar-top">
+      <!-- Logo button -->
+      <button class="icon-btn" onclick="window.location.href='index.html';">
+        <img src="assets/logo.png" alt="Logo">
+      </button>
+    </div>
+
+    <div class="sidebar-middle">
+      <!-- Info button -->
+      <button class="icon-btn" onclick="window.location.href='info.html';">
+        <img src="assets/info.png" alt="Info">
+      </button>
+
+      <!-- Proxy button -->
+      <button class="icon-btn" onclick="window.location.href='proxy.html';">
+        <img src="assets/proxy.png" alt="Proxy">
+      </button>
+    </div>
+
+    <div class="sidebar-bottom">
+      <!-- optional extra icons -->
+    </div>
+  </div>
+
+  <!-- HOME SCREEN CONTENT -->
+  <div class="main-content">
+    <h1 class="title">Proxy Lord</h1>
+  </div>
+
+</body>
+</html>
